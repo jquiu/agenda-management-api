@@ -4,7 +4,6 @@ const Price = require("../models/price");
 const getPrices = async (req, res, next) => {
   try {
     const prices = await Price.find({});
-    console.log(prices)
     res.status(200).json({
       success: true,
       data: prices,
